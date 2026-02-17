@@ -33,6 +33,9 @@ app.post("/api/chat", async (req, res) => {
     res.status(500).json({ error: "Ошибка сервера" });
   }
 });
+app.get("/", (req, res) => {
+  res.send("AI backend работает 🚀");
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
